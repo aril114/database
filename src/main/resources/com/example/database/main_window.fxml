@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="455.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.database.MainWindowController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="541.0" prefWidth="498.0" spacing="20.0">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+         <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" />
+         <Label fx:id="label" />
+          <Button onAction="#onAddRandomRowButtonClick" text="добавить случайные данные" />
+         <Button mnemonicParsing="false" onAction="#onRemoveRowButtonClick" text="удалить строку" />
+         <HBox prefHeight="0.0" prefWidth="405.0">
+            <children>
+               <Button mnemonicParsing="false" onAction="#onFindButtonClick" prefHeight="25.0" prefWidth="244.0" text="найти в первом столбце" />
+               <TextField fx:id="patternField" prefHeight="25.0" prefWidth="235.0">
+                  <HBox.margin>
+                     <Insets left="60.0" />
+                  </HBox.margin></TextField>
+            </children>
+         </HBox>
+      </VBox>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#onLoadButtonClick" text="Load" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onAboutButtonClick" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
